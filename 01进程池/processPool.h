@@ -146,7 +146,7 @@ static void sig_handler(int sig){
 /*
 用于设置信号sig所对应的的处理动作handler，当遇到这个信号后，会去调用这个处理函数
 */
-static void addsig(int sig,void(*handler)(int),bool restart = true){		//设置信号对应的处理函数！！！
+static void addsig(int sig,void(handler)(int),bool restart = true){		//设置信号对应的处理函数！！！
 	struct sigaction sa;
 	memset(&sa,0,sizeof(sa));
 
